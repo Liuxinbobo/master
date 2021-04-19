@@ -1,7 +1,8 @@
 /*
-ĞèÒª³ÌĞò¶ÁÈ¡µÄÎÄ¼ş±ØĞëÃüÃûÎªdata.txt 
-ÇëÓÃºê¶¨Òå×é¼ä·Ö¸ô·û,Ä¬ÈÏÎª'#' 
-ÀıÈç£º
+åˆ˜é‘«åš
+éœ€è¦ç¨‹åºè¯»å–çš„æ–‡ä»¶å¿…é¡»å‘½åä¸ºdata.txt 
+è¯·ç”¨å®å®šä¹‰ç»„é—´åˆ†éš”ç¬¦,é»˜è®¤ä¸º'#' 
+ä¾‹å¦‚ï¼š
 #define SIG '@' 
 */
 #include<stdio.h>
@@ -9,19 +10,19 @@
 #define SIG '#'
 #endif
 
-int pc=0;//»º´æÎ»ÊıĞòºÅ 
-int numstt=0;//Â¼ÈëÊı×ÖĞòºÅ
-int num=0;//ÅĞ¶¨Êı×Ö¸öÊı
-int numt=0;//Êı×Ö¸úËæ 
-int flag=0;//Êı×Ö½áÊø±êÖ¾Î»
-int numbf=0;//×Ö·ûÇ°ÎªÊı×ÖµÄ±êÖ¾
-int groupstt=0;//µ±Ç°×éÊı 
-int group=0;//Êı¾İ×éÊı
-int tail;//¸úËæ±äÁ¿
+int pc=0;//ç¼“å­˜ä½æ•°åºå· 
+int numstt=0;//å½•å…¥æ•°å­—åºå·
+int num=0;//åˆ¤å®šæ•°å­—ä¸ªæ•°
+int numt=0;//æ•°å­—è·Ÿéš 
+int flag=0;//æ•°å­—ç»“æŸæ ‡å¿—ä½
+int numbf=0;//å­—ç¬¦å‰ä¸ºæ•°å­—çš„æ ‡å¿—
+int groupstt=0;//å½“å‰ç»„æ•° 
+int group=0;//æ•°æ®ç»„æ•°
+int tail;//è·Ÿéšå˜é‡
 int edofl=0;//EOF? 
-int sign=1;// ·ûºÅ 
+int sign=1;// ç¬¦å· 
 int str,cache[20]={0};
-double times=1;//±¶ÂÊ
+double times=1;//å€ç‡
 double** datad;
 
 double** readch(char* fname,int write){
@@ -50,7 +51,7 @@ double** readch(char* fname,int write){
 	double** data=new double* [group];
 	for(int i=0;i<group;i++)data[i]=new double[numt];
 	for(int i=0;i<group;i++)for(int j=0;j<numt;j++)data[i][j]=0;
-//¶¯Ì¬´´½¨¶şÎ¬Êı×é 
+//åŠ¨æ€åˆ›å»ºäºŒç»´æ•°ç»„ 
 
 	p1=fopen(fname,"r");
 	while(1){
